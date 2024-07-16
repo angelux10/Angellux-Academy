@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El inicio de un nuevo imperio</title>
+    <style>
+        body {
+            background-color: #f4f1ea;
+            color: #333;
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #d4af37;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .interactive {
+            cursor: pointer;
+            color: #d4af37;
+            font-weight: bold;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        .question button {
+            background-color: #d4af37;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .question button:hover {
+            background-color: #c9a22f;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function showDetail(detailId) {
+            var detail = document.getElementById(detailId);
+            if (detail.style.display === 'none') {
+                detail.style.display = 'block';
+            } else {
+                detail.style.display = 'none';
+            }
+        }
+
+        function checkAnswer(questionId, correctAnswer) {
+            var selectedAnswer = document.querySelector(`input[name="${questionId}"]:checked`);
+            if (selectedAnswer && selectedAnswer.value === correctAnswer) {
+                alert("¡Correcto!");
+            } else {
+                alert("Incorrecto. Intenta de nuevo.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>El inicio de un nuevo imperio</h1>
+    </header>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#historia">Historia</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="container" id="inicio">
+        <h2>Bienvenido</h2>
+        <p>Descubre la fascinante historia del Imperio Mexica, una de las civilizaciones más impresionantes de Mesoamérica. Haz clic en las secciones interactivas para conocer más detalles y participa en nuestro cuestionario para probar tus conocimientos.</p>
+    </div>
+    <div class="container" id="historia">
+        <h2>Historia del Imperio Mexica</h2>
+        <p>El Imperio Mexica, también conocido como el Imperio Azteca, fue una entidad política formada por la Triple Alianza de Tenochtitlán, Texcoco y Tlacopan. Esta alianza se consolidó a principios del siglo XV y permitió a los mexicas expandir su dominio sobre gran parte del centro y sur de México. <span class="interactive" onclick="showDetail('detalle1')">[Leer más]</span></p>
+        <div id="detalle1" style="display: none;">
+            <p>Los mexicas llegaron al Valle de México alrededor del siglo XIII. Según su mito de origen, guiados por su dios Huitzilopochtli, encontraron un águila posada sobre un nopal devorando una serpiente, lo cual indicaba el lugar donde debían establecerse. Este sitio fue Tenochtitlán, fundada en 1325 en un islote del lago de Texcoco.</p>
+            <p>Tenochtitlán rápidamente se convirtió en un centro comercial, político y religioso. Los mexicas construyeron impresionantes estructuras, como el Templo Mayor, dedicado a Huitzilopochtli y Tlaloc, dioses de la guerra y la lluvia, respectivamente.</p>
+        </div>
+        <p>La expansión del Imperio Mexica comenzó bajo el liderazgo de Itzcóatl, quien, junto con sus aliados de Texcoco y Tlacopan, derrotó a Azcapotzalco en 1428. Esta victoria consolidó la Triple Alianza y marcó el inicio de una era de expansión territorial y consolidación de poder. <span class="interactive" onclick="showDetail('detalle2')">[Leer más]</span></p>
+        <div id="detalle2" style="display: none;">
+            <p>Durante el reinado de Moctezuma I, el imperio se expandió significativamente, abarcando territorios desde el Golfo de México hasta el océano Pacífico. Moctezuma I implementó reformas que fortalecieron la estructura política y militar del imperio, asegurando la lealtad de los estados sometidos mediante tributos y matrimonios estratégicos.</p>
+            <p>La economía mexica se basaba en la agricultura, el comercio y los tributos. Cultivaban maíz, frijoles, calabazas y otros productos mediante el sistema de chinampas, islas artificiales construidas en los lagos. El comercio era vital, con mercados como el de Tlatelolco, donde se intercambiaban bienes de todo el imperio.</p>
+        </div>
+        <p>La sociedad mexica estaba altamente estratificada. En la cima se encontraban los nobles (pipiltin), seguidos por los plebeyos (macehualtin), los siervos y los esclavos. Los guerreros ocupaban un lugar especial, y aquellos que capturaban prisioneros para el sacrificio gozaban de gran prestigio. <span class="interactive" onclick="showDetail('detalle3')">[Leer más]</span></p>
+        <div id="detalle3" style="display: none;">
+            <p>La religión desempeñaba un papel central en la vida de los mexicas. Creían en un panteón de dioses relacionados con la naturaleza, la guerra y la agricultura. Huitzilopochtli, el dios de la guerra y el sol, era uno de los más importantes. Los sacrificios humanos eran comunes, ya que se creía que la sangre alimentaba a los dioses y mantenía el equilibrio del cosmos.</p>
+            <p>Los mexicas también tenían una rica tradición cultural. La poesía, la música y la danza eran formas de expresar su visión del mundo y honrar a sus dioses. Los códices, manuscritos ilustrados, registraban su historia, religión y conocimientos científicos.</p>
+        </div>
+        <p>El auge del Imperio Mexica continuó hasta la llegada de los españoles en 1519. Hernán Cortés, liderando una expedición de conquistadores, aprovechó las rivalidades entre los estados sometidos y formó alianzas con enemigos de los mexicas, como los tlaxcaltecas. <span class="interactive" onclick="showDetail('detalle4')">[Leer más]</span></p>
+        <div id="detalle4" style="display: none;">
+            <p>Moctezuma II, el emperador en el momento de la llegada de los españoles, inicialmente recibió a Cortés con hospitalidad, creyendo que podría ser una encarnación del dios Quetzalcóatl. Sin embargo, las tensiones pronto surgieron, y los españoles tomaron a Moctezuma como rehén, lo que desató un conflicto abierto.</p>
+            <p>En 1520, durante la Noche Triste, los españoles intentaron escapar de Tenochtitlán tras un levantamiento mexica. Sufrieron grandes bajas, pero regresaron con refuerzos y un cerco prolongado. En 1521, tras un asedio devastador, Tenochtitlán cayó, marcando el fin del Imperio Mexica y el inicio de la colonización española en Mesoamérica.</p>
+        </div>
+        <p>El legado del Imperio Mexica perdura en la cultura mexicana. La Ciudad de México, construida sobre las ruinas de Tenochtitlán, es testimonio de la grandeza mexica. La historia, mitología y logros arquitectónicos de los mexicas continúan siendo estudiados y celebrados en todo el mundo. <span class="interactive" onclick="showDetail('detalle5')">[Leer más]</span></p>
+        <div id="detalle5" style="display: none;">
+            <p>La comprensión de la cosmovisión mexica se ha enriquecido gracias a la arqueología y al estudio de los códices. Estos documentos han revelado detalles sobre su calendario, astronomía y medicina. El calendario mexica, por ejemplo, es conocido por su precisión y complejidad, con ciclos rituales y solares que regían tanto las actividades cotidianas como las ceremonias religiosas.</p>
+            <p>El Templo Mayor, excavado y restaurado, ofrece una visión profunda de la vida religiosa mexica. Las ofrendas encontradas en el templo incluyen objetos de todo el imperio, demostrando la amplitud de su comercio y sus conexiones culturales. Los estudios continúan desvelando nuevos aspectos de la vida cotidiana, la organización social y las prácticas religiosas de los mexicas.</p>
+            <p>El impacto del encuentro entre mexicas y españoles fue profundo y duradero. La mezcla de culturas dio origen a una nueva identidad mestiza, que aún define a México hoy. La resistencia y adaptación de los pueblos indígenas, junto con la influencia europea, moldearon una sociedad diversa y rica en tradiciones.</p>
+        </div>
+        <p>Hoy en día, el estudio del Imperio Mexica sigue siendo una fuente de fascinación y respeto. Sus logros en ingeniería, su compleja estructura social y su rica vida cultural son testimonio de una civilización avanzada que dejó una huella indeleble en la historia de la humanidad. <span class="interactive" onclick="showDetail('detalle6')">[Leer más]</span></p>
+        <div id="detalle6" style="display: none;">
+            <p>La educación mexica era estricta y variada. Los jóvenes nobles asistían a calmécac, donde recibían formación en historia, religión, y habilidades de liderazgo. Los plebeyos asistían a telpochcalli, donde se enfocaban en el entrenamiento militar y la vida comunitaria. Este sistema educativo aseguraba que todos los miembros de la sociedad estuvieran preparados para sus roles específicos.</p>
+            <p>La medicina mexica también era avanzada, combinando conocimientos herbolarios con prácticas rituales. Los ticitl (médicos) usaban plantas medicinales para tratar diversas enfermedades y dolencias, y muchos de sus remedios todavía se usan hoy en día. La combinación de observación empírica y creencias religiosas caracterizaba su enfoque hacia la salud.</p>
+            <p>El arte mexica, visible en esculturas, cerámicas y joyería, reflejaba su cosmovisión y habilidades técnicas. Las piezas de obsidiana, jade y turquesa no solo eran hermosas, sino que también tenían significados simbólicos profundos. Las esculturas de deidades y los relieves arquitectónicos mostraban la destreza de los artesanos mexicas y su conexión espiritual con el entorno.</p>
+        </div>
+        <div class="question">
+            <h3>Pregunta 1: ¿Cuál era el dios principal de los mexicas?</h3>
+            <input type="radio" id="q1a" name="q1" value="Huitzilopochtli">
+            <label for="q1a">Huitzilopochtli</label><br>
+            <input type="radio" id="q1b" name="q1" value="Quetzalcóatl">
+            <label for="q1b">Quetzalcóatl</label><br>
+            <input type="radio" id="q1c" name="q1" value="Tlaloc">
+            <label for="q1c">Tlaloc</label><br>
+            <button onclick="checkAnswer('q1', 'Huitzilopochtli')">Comprobar respuesta</button>
+        </div>
+        <div class="question">
+            <h3>Pregunta 2: ¿Qué estructura fue dedicada a Huitzilopochtli y Tlaloc?</h3>
+            <input type="radio" id="q2a" name="q2" value="Templo Mayor">
+            <label for="q2a">Templo Mayor</label><br>
+            <input type="radio" id="q2b" name="q2" value="Pirámide del Sol">
+            <label for="q2b">Pirámide del Sol</label><br>
+            <input type="radio" id="q2c" name="q2" value="Templo de Quetzalcóatl">
+            <label for="q2c">Templo de Quetzalcóatl</label><br>
+            <button onclick="checkAnswer('q2', 'Templo Mayor')">Comprobar respuesta</button>
+        </div>
+    </div>
+    <div class="container" id="contacto">
+        <h2>Contacto</h2>
+        <p>Para más información, puedes contactarme a través del siguiente correo electrónico: <a href="mailto:angellucas1020939@gmail.com">angellucas1020939@gmail.com</a></p>
+    </div>
+    <footer>
+        <p>&copy; 2024 El inicio de un nuevo imperio</p>
+    </footer>
+</body>
+</html>
